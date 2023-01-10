@@ -1,7 +1,7 @@
 // Silence some warnings so they don't distract from the exercise.
 #![allow(dead_code, unused_variables)]
 
-use ding_machine::{ding, on_off, print_difference, print_distance};
+use ding_machine::{ding, on_off, print_difference, print_distance, print_array};
 
 fn main() {
     let coords: (f32, f32) = (6.3, 15.0);
@@ -17,8 +17,8 @@ fn main() {
     // Create an array of type [f32; 2] and initialize it to contain the
     // information from coords.  Uncomment the print_array line and run the code.
     //
-    //let coords_arr...               // create an array literal out of parts of `coord` here
-    //print_array(coords_arr);        // and pass it in here (this line doesn't need to change)
+    let coords_arr = [coords.0, coords.1];               // create an array literal out of parts of `coord` here
+    print_array(coords_arr);        // and pass it in here (this line doesn't need to change)
 
     let series = [1, 1, 2, 3, 5, 8, 13];
     // 3. Make the `ding` function happy by passing it the value 13 out of the `series` array.
