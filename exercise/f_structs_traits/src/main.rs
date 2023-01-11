@@ -14,7 +14,7 @@ trait Bite {
 //
 #[derive(Debug)] // include this line right before your struct definition
 struct Grapes {
-    grapes: f32,
+    grapes: i32,
 }
 
 // 3. Implement Bite for Grapes.  When you bite a Grapes, subtract 1 from how many grapes are left.
@@ -22,7 +22,7 @@ struct Grapes {
 //
 impl Bite for Grapes {
     fn bite(self: &mut Self) {
-        self.grapes -= 1.0;
+        self.grapes -= 1;
     }
 }
 
@@ -37,7 +37,7 @@ fn main() {
     // 4. Uncomment and adjust the code below to match how you defined your
     // Grapes struct.
     //
-    let mut grapes = Grapes { grapes: 100.0 };
+    let mut grapes = Grapes { grapes: 100 };
     grapes.bite();
     println!("Eat a grape: {:?}", grapes);
 
